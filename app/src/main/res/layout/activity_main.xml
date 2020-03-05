@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/delete_selected_channel"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/close"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="已选频道"
+                android:textSize="17sp"
+                android:textColor="#222222"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="长按拖动排序"
+                android:layout_weight="1"
+                android:paddingLeft="12dp"
+                android:textSize="13sp"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/operator"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:background="@drawable/bg_channel_manage"
+                android:textColor="#3D73FF"
+                android:text="编辑" />
+
+        </LinearLayout>
+
+        <com.frank.frank.channelmanager.drag.DragGrid
+            android:id="@+id/userGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="vertical"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="未选频道"
+                android:textSize="17sp"
+                android:textColor="#222222"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="点击添加频道"
+                android:layout_weight="1"
+                android:paddingLeft="12dp"
+                android:textSize="13sp"
+                android:textColor="#999999"/>
+
+        </LinearLayout>
+
+        <com.frank.frank.channelmanager.drag.OtherGridView
+            android:id="@+id/otherGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="vertical"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" />
+
+        <TextView
+            android:id="@+id/tv_zhuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:textColor="#bbbbbb"
+            android:text="您已订阅全部频道，现在去转转吧"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/ll_pin"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
