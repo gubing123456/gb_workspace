@@ -64,6 +64,8 @@ public class MainActivity extends Activity {
      */
     private TextView tvZhuan;
 
+
+
     private boolean isModify = false;
 
     @Override
@@ -85,6 +87,8 @@ public class MainActivity extends Activity {
         userChannelList.add(new ChannelItem(0 , "短视频", 0, 0));
         userChannelList.add(new ChannelItem(0 , "直播回放", 0, 0));
         userChannelList.add(new ChannelItem(0 , "评论", 0, 0));
+
+
 
         //备选
         otherChannelList.add(new ChannelItem(0 , "财经", 0, 0));
