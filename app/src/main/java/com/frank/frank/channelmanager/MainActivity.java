@@ -98,7 +98,6 @@ public class MainActivity extends Activity {
         otherChannelList.add(new ChannelItem(0 , "基金", 0, 0));
         otherChannelList.add(new ChannelItem(0 , "机会", 0, 0));
 
-
         if (otherChannelList.size() == 0) {
             tvZhuan.setVisibility(View.VISIBLE);
         } else {
